@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="32dp" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/conten_shapka"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="amung,delta"
+        app:flow_horizontalGap="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/delta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D E L T A"
+        android:textColor="@color/blue"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/amung"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_amung"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/passagers_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/content"
+        app:layout_constraintTop_toBottomOf="@id/conten_shapka">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passenger"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Kathleen Huang"
+            android:textColor="@color/gray"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/out_into"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/light_blue"
+        app:layout_constraintTop_toBottomOf="@id/passagers_name">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/content1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="32dp" />
+
+
+            <LinearLayout
+                android:id="@+id/JFK_SEA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toEndOf="@id/content1"
+                app:layout_constraintTop_toTopOf="parent"
+
+                >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JFK"
+                    android:textColor="@color/white"
+                    android:textSize="48sp" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="45dp"
+                    android:src="@drawable/ic_baseline_flight_takeoff_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SEA"
+                    android:textColor="@color/white"
+                    android:textSize="48sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/strong_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@id/content1"
+                app:layout_constraintTop_toBottomOf="@id/JFK_SEA">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NEW YORK CITY"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="110dp"
+                    android:text="SEATTLE"
+
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/depart_arrive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="depart,arrive"
+                app:flow_horizontalGap="160dp"
+                app:layout_constraintStart_toEndOf="@id/content1"
+                app:layout_constraintTop_toBottomOf="@id/strong_city" />
+
+            <TextView
+                android:id="@+id/depart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DEPART"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/arrive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARRIVE"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="depart_time,arrive_time"
+
+                app:flow_horizontalGap="110dp"
+                app:layout_constraintStart_toEndOf="@id/content1"
+                app:layout_constraintTop_toBottomOf="@id/depart_arrive" />
+
+            <TextView
+                android:id="@+id/depart_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8:00AM"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/arrive_time"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="11:17AM"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/boarding_flight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toEndOf="@id/content"
+        app:layout_constraintTop_toBottomOf="@id/out_into">
+
+        <TextView
+            android:textColor="@color/gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BOARDING BEGINS" />
+
+        <TextView
+            android:textColor="@color/gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:text="FLIGHT" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/boarding_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/content"
+        app:layout_constraintTop_toBottomOf="@id/boarding_flight">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7:30AM"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
+            android:text="D2218"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:text="GATE"
+        android:id="@+id/gate"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/gray"
+        app:layout_constraintStart_toEndOf="@id/content"
+        app:layout_constraintTop_toBottomOf="@id/boarding_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="D4"
+        android:id="@+id/D4"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/content"
+        app:layout_constraintTop_toBottomOf="@id/gate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <TextView
+        android:text="SEAT"
+        android:id="@+id/seat"
+        app:layout_constraintStart_toEndOf="@id/content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/D4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="3C"
+        android:id="@+id/C3"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/content"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+<ImageView
+    android:src="@drawable/ic_qr_code"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="130dp"
+    app:layout_constraintStart_toEndOf="@id/C3"
+    app:layout_constraintTop_toBottomOf="@id/boarding_time"
+    android:layout_width="170dp"
+    android:layout_height="170dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
